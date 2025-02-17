@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-01-24 14:42:41.444666",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "product",
+  "quantity",
+  "catalog",
+  "addons",
+  "column_break_wzkz",
+  "catalog_cost",
+  "addon_cost",
+  "total_cost"
+ ],
+ "fields": [
+  {
+   "fieldname": "product",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Product",
+   "options": "Products",
+   "reqd": 1
+  },
+  {
+   "fieldname": "quantity",
+   "fieldtype": "Int",
+   "label": "Quantity",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "catalog",
+   "fieldtype": "Link",
+   "label": "Catalog",
+   "options": "Catalog",
+   "reqd": 1
+  },
+  {
+   "fieldname": "addons",
+   "fieldtype": "Table MultiSelect",
+   "label": "Addons",
+   "options": "Addon Link"
+  },
+  {
+   "fetch_from": "catalog.price",
+   "fieldname": "catalog_cost",
+   "fieldtype": "Currency",
+   "label": "Catalog Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "addon_cost",
+   "fieldtype": "Currency",
+   "label": "Addon Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_cost",
+   "fieldtype": "Currency",
+   "label": "Total Cost",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_wzkz",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-01-24 14:46:33.616296",
+ "modified_by": "Administrator",
+ "module": "Cost Estimation",
+ "name": "Cost Estimation",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
